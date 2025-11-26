@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.3] - 2025-11-26
+
+### What's Changed
+* Remove the prerelease summary by @valeryan in https://github.com/valeryan/vscode-phpsab-workflow-test/pull/2
+
+
+**Full Changelog**: https://github.com/valeryan/vscode-phpsab-workflow-test/compare/v0.0.2...v0.0.3
+
+
 ## [0.0.3-beta.1] - 2025-11-26
 
 ### What's Changed
