@@ -62,8 +62,8 @@ jobs:
 
       - name: Verify Build Output
         run: |
-          if [ ! -f "out/main.js" ]; then
-            echo "❌ Build failed: out/main.js not found"
+          if [ ! -f "out/extension.js" ]; then
+            echo "❌ Build failed: out/extension.js not found"
             exit 1
           fi
           echo "✅ Build successful"
@@ -165,12 +165,13 @@ jobs:
       - name: Check for Changelog Changes
         id: changelog-check
         run: |
-          if git diff --quiet; then
-            echo "changes=false" >> $GITHUB_OUTPUT
-            echo "ℹ️  No changelog changes to commit"
-          else
+          # Check for both modified and untracked files
+          if [ -n "$(git status --porcelain CHANGELOG.md)" ]; then
             echo "changes=true" >> $GITHUB_OUTPUT
             echo "📝 Changelog changes detected"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  No changelog changes to commit"
           fi
 
       - name: Commit Changelog Changes
