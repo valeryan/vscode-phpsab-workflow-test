@@ -55,7 +55,7 @@ jobs:
       - name: Lint and Test
         run: |
           npm run lint
-          npm run test
+          xvfb-run npm test
 
       - name: Build Extension
         run: npm run vscode:prepublish
