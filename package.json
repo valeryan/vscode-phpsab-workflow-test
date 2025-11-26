@@ -2,7 +2,7 @@
   "name": "vscode-phpsab-workflow-test",
   "displayName": "VS Code Extension Workflow Test",
   "description": "A test extension for GitHub workflow testing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "valeryan",
   "engines": {
     "vscode": "^1.85.0"
